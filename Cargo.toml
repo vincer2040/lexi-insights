@@ -1,0 +1,13 @@
+[package]
+name = "lexi-insights"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+dotenv = "0.15.0"
+lexi-rs = "0.1.5"
+log = { version = "0.4.20", features = ["kv_unstable", "kv_unstable_serde"] }
+tokio = { version = "1.34.0", features = ["rt-multi-thread", "fs", "macros"] }
