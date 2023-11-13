@@ -278,6 +278,8 @@ dependencies = [
  "dotenv",
  "lexi-rs",
  "log",
+ "serde",
+ "serde_json",
  "structured-logger",
  "tokio",
 ]

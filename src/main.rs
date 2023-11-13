@@ -1,11 +1,12 @@
 // use dotenv::dotenv;
 mod routes;
+mod db;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     init_logger("info");
     let app = app();
-    let addr = "127.0.0.1:6969";
+    let addr = "127.0.0.1:4178";
     log::info!("listening on http://{}", addr);
     serve(app, addr).await?;
     Ok(())
@@ -18,7 +19,9 @@ fn init_logger(level: &str) {
 }
 
 fn app() -> axum::Router {
-    axum::Router::new().route("/", axum::routing::get(routes::root::root_get))
+    axum::Router::new()
+        .route("/", axum::routing::get(routes::root::root_get))
+        .route("/api/entries", axum::routing::get(routes::api::entries_get))
 }
 
 async fn serve(app: axum::Router, addr: &str) -> anyhow::Result<()> {
