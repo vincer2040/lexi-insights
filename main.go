@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/vincer2040/lexi-insights/cmd/insights"
 
 func main() {
-    fmt.Println("hi mom")
+    insights.Main()
 }
