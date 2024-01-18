@@ -10,6 +10,7 @@ import (
 func Main() {
 	e := echo.New()
 	e.Renderer = render.New()
+    e.Static("/styles", "public/styles")
 	e.Use(middleware.Logger())
 	e.GET("/", routes.RootGet)
 	e.Logger.Fatal(e.Start(":5173"))

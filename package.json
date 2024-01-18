@@ -1,0 +1,16 @@
+{
+  "name": "lexi-insights",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "dev": "npx tailwindcss -i ./css/index.css -o ./public/styles/index.css --watch",
+      "styles": "npx tailwindcss -i ./css/index.css -o ./public/styles/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

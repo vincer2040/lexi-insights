@@ -1,5 +1,8 @@
 all:
 	go build -o bin/main
 
+css:
+	pnpm styles
+
 dev:
-	air
+	air & pnpm dev
